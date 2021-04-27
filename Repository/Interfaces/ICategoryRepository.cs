@@ -6,8 +6,8 @@ namespace Repository.Interfaces
     {
         #region Methods
 
-        Category GetcategoryByName(string categoryName);
-        Category GetcategoryByDescription(string description); 
+        Category GetCategoryByName(string categoryName);
+        Category GetCategoryByDescription(string description); 
 
         #endregion
     }

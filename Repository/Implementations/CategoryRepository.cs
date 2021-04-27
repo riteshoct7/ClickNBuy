@@ -29,12 +29,12 @@ namespace Repository.Implementations
 
         #region Methods
 
-        public Category GetcategoryByDescription(string description)
+        public Category GetCategoryByDescription(string description)
         {
             return appDbContext.Categories.Where(x => x.Description == description).FirstOrDefault();
         }
 
-        public Category GetcategoryByName(string categoryName)
+        public Category GetCategoryByName(string categoryName)
         {
             return appDbContext.Categories.Where(x => x.CategoryName == categoryName).FirstOrDefault();
         } 
