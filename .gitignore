@@ -7,3 +7,13 @@
 /Repository/obj
 /UI/bin/Debug/net5.0
 /UI/obj
+/Common/bin/Debug/net5.0
+/Common/obj
+/Entity/bin/Debug/net5.0
+/Repository/bin/Debug/net5.0
+/Resources/bin/Debug/net5.0
+/Resources/obj
+/Services/bin/Debug/net5.0
+/Services/obj
+/WebApi/bin/Debug/net5.0
+/WebApi/obj
