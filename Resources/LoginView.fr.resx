@@ -123,6 +123,9 @@
   <data name="Login" xml:space="preserve">
     <value>Connexion</value>
   </data>
+  <data name="LoginToAccount" xml:space="preserve">
+    <value>LoginToAccount</value>
+  </data>
   <data name="SignUp" xml:space="preserve">
     <value>S'inscrire</value>
   </data>

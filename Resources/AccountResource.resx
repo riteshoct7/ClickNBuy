@@ -117,37 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClickHere" xml:space="preserve">
-    <value>Click Here</value>
+  <data name="AcceptedTermsConditionRequiredMessage" xml:space="preserve">
+    <value>Please Accept Terms and Conditions</value>
   </data>
-  <data name="ForgotPassword" xml:space="preserve">
-    <value>Forgot Password?</value>
+  <data name="DisplayConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
-  <data name="GetStarted" xml:space="preserve">
-    <value>to get started.</value>
+  <data name="DisplayEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="DisplayFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="DisplayLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="DisplayPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="EmailRequiredMessage" xml:space="preserve">
+    <value>Email Required</value>
+  </data>
+  <data name="FirstNameRequiredMessage" xml:space="preserve">
+    <value>First Name Required</value>
+  </data>
+  <data name="InValidEmail" xml:space="preserve">
+    <value>InValid Email</value>
+  </data>
+  <data name="LastNameRequiredMessage" xml:space="preserve">
+    <value>Last Name Required</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="LoginToAccount" xml:space="preserve">
-    <value>Login to your account</value>
+  <data name="PasswordConfirmationMatch" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
   </data>
-  <data name="NoAccountText" xml:space="preserve">
-    <value>Don't have a ClickNBuy Account?</value>
+  <data name="PasswordLengthMessage" xml:space="preserve">
+    <value>The passsword must be at least 6 characters long</value>
   </data>
-  <data name="Password" xml:space="preserve">
-    <value>Password</value>
+  <data name="PasswordRequiredMessage" xml:space="preserve">
+    <value>Password Required</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
+  <data name="PromotionsSubscriptionsText" xml:space="preserve">
+    <value>Yes, subscribe me to upcoming promotions</value>
+  </data>
+  <data name="ReadAgreed" xml:space="preserve">
+    <value>I have read and agreed to the</value>
+  </data>
+  <data name="RequiredDataIndication" xml:space="preserve">
+    <value>Indicates required</value>
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Sign Up</value>
   </data>
-  <data name="SocialConnect" xml:space="preserve">
-    <value>Social Login</value>
+  <data name="SignUpForFree" xml:space="preserve">
+    <value>Sign Up For Free</value>
   </data>
-  <data name="UserName" xml:space="preserve">
-    <value>User Name</value>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>Terms and Conditions</value>
   </data>
 </root>

@@ -1,0 +1,90 @@
+﻿@model UI.Models.SignUpModel
+@using Resources
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="col-md-9">
+
+            <form asp-action="SignUp">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <h2 class="text-center">@Html.Raw(AccountResource.SignUpForFree)</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="float-right control-label">
+                        <span class="m-0 text-danger">*</span><small> @AccountResource.RequiredDataIndication</small>
+                    </label>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label">
+                        @(AccountResource.DisplayFirstName) <span class="m-0 text-danger">*</span>
+                    </label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label">
+                        @(AccountResource.DisplayLastName) <span class="m-0 text-danger">*</span>
+                    </label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">
+                        @(AccountResource.DisplayEmail) <span class="m-0 text-danger">*</span>
+                    </label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label">
+                        @(AccountResource.DisplayPassword ) <span class="m-0 text-danger">*</span>
+                    </label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="control-label">
+                        @(AccountResource.DisplayConfirmPassword ) <span class="m-0 text-danger">*</span>
+                    </label>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" asp-for="SubscribedForPromotions" /> @AccountResource.PromotionsSubscriptionsText
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" asp-for="AcceptedTermsCondition" /> @AccountResource.ReadAgreed <a target="_blank" href="/Home/TermsAndConditions">@AccountResource.TermsConditions</a>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="@AccountResource.SignUp" class="btn btn-primary" />
+                    <a asp-action="Login" asp-controller="Account" class="btn btn-info">@AccountResource.Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
