@@ -38,6 +38,7 @@ namespace Services.Implementations
         public User Login (string userName, string password)
         {
             var result = signInManager.PasswordSignInAsync(userName,password,false,false).Result;
+            
             if (result.Succeeded)
             {
                 var user = userManager.FindByNameAsync(userName).Result;
@@ -46,6 +47,11 @@ namespace Services.Implementations
                 return user;                  
             }
             return null;
+        }
+
+        public Task<SignInResult> Login1(string userName, string password)
+        {
+            return  signInManager.PasswordSignInAsync(userName, password, false, false);                        
         }
 
         public async Task<bool> SignOut()

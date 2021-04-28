@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 
 namespace Services.Interfaces
@@ -14,7 +15,9 @@ namespace Services.Interfaces
 
         User GetUser(string userName);
 
-        Task<bool> SignOut(); 
+        Task<bool> SignOut();
+
+        Task<SignInResult> Login1(string userName, string password);
 
         #endregion
     }

@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Resources;
 using Services.Interfaces;
+using System.Linq;
 using System.Threading.Tasks;
 using UI.Models;
+
 
 namespace UI.Controllers
 {
@@ -44,8 +46,26 @@ namespace UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginModel model)
+        public IActionResult Login(LoginModel model, string returnUrl)
         {
+            if (ModelState.IsValid)
+            {
+                var user = authService.Login(model.UserName, model.Password);
+                if (user != null)
+                {
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                        return Redirect(returnUrl);
+
+                    if (user.Roles.Contains("Admin"))
+                    {
+                        return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                    }
+                    else if (user.Roles.Contains("User"))
+                    {
+                        return RedirectToAction("Index", "Dashboard", new { area = "User" });
+                    }
+                }
+            }
             return View();
         }
 
@@ -61,6 +81,7 @@ namespace UI.Controllers
             {
                 var user = mapper.Map<User>(model);
                 user.UserName = model.Email;
+                user.CreatedDate = Util.GetCurrentDateTime();                
                 bool result = await authService.SignUp(user, model.Password);
                 if (result)
                 {

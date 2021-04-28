@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common
+﻿namespace Common
 {
     public class Constants
     {
+        #region Constants
+
         public const string UserRoleTitle = "User";
+        public const string AdminRoleTitle = "Admin";
+
+        #endregion
     }
 }
