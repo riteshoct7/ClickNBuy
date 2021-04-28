@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Resources;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UI.Models;
 
 namespace UI.Controllers
@@ -11,22 +7,28 @@ namespace UI.Controllers
     public class AccountController : Controller
     {
 
+        #region Properties
+
         private readonly IAppResource _sharedLocalizer;
+
+        #endregion
+
+        #region Constructors
         public AccountController(IAppResource sharedLocalizer)
         {
             _sharedLocalizer = sharedLocalizer;
         }
+        #endregion
 
+        #region Methods
         public IActionResult Index()
         {
-    
+
             return View();
         }
 
         public IActionResult Login()
         {
-            string result = _sharedLocalizer.GetResource("Water");
-            ViewBag.Water = result;
             return View();
         }
 
@@ -39,6 +41,8 @@ namespace UI.Controllers
         public IActionResult SignUp()
         {
             return View();
-        }
+        } 
+        #endregion
+
     }
 }
