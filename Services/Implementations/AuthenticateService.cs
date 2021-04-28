@@ -61,13 +61,20 @@ namespace Services.Implementations
             }
         }
 
-        public bool SingUp(User user, string password)
+        public async Task<bool> SignUp(User user, string password)
         {
             var result = userManager.CreateAsync(user, password).Result;
             if (result.Succeeded)
-            {
-                string role = "User";
-                var roleResult = userManager.AddToRoleAsync(user, role).Result;
+            {                
+                if (!roleManager.RoleExistsAsync(Common.Constants.UserRoleTitle).Result)
+                {                    
+                    Role objRole = new Role();
+                    objRole.Name = Common.Constants.UserRoleTitle;
+                    objRole.NormalizedName = Common.Constants.UserRoleTitle;
+                    objRole.Description = Common.Constants.UserRoleTitle;
+                    await roleManager.CreateAsync(objRole);
+                }
+                var roleResult = userManager.AddToRoleAsync(user, Common.Constants.UserRoleTitle).Result;
                 if (roleResult.Succeeded)
                 {
                     return true;

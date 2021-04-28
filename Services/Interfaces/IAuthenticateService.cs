@@ -1,8 +1,4 @@
 ﻿using Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Services.Interfaces
@@ -14,7 +10,7 @@ namespace Services.Interfaces
 
         User Login(string userName, string password);
 
-        bool SingUp(User user, string password);
+        Task<bool>   SignUp(User user, string password);
 
         User GetUser(string userName);
 
