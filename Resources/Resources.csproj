@@ -28,10 +28,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AccountResource.resx</DependentUpon>
     </Compile>
-    <Compile Update="LoginView - Copy.Designer.cs">
-      <DependentUpon>LoginView.resx</DependentUpon>
+    <Compile Update="LoginView.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>LoginView.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\SharedResources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -45,7 +45,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccountResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="LoginView.ba.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="LoginView.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoginView.gu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="LoginView.resx">
