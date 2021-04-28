@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UI.Areas.Admin.Models.CategoryModel>
+﻿@model IEnumerable<Entity.Category>
 
 @{
     ViewData["Title"] = "List";
@@ -13,23 +13,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            <th></th>
+            <th>Action </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryId)
-            </td>
+   
             <td>
                 @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
@@ -37,8 +32,8 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })                 
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CategoryId })                 
+                @Html.ActionLink("Delete", "Delete", new {  id=item.CategoryId})
             </td>
         </tr>
 }

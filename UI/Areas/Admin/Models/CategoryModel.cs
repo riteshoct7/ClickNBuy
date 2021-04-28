@@ -5,6 +5,7 @@ namespace UI.Areas.Admin.Models
 {
     public class CategoryModel
     {
+        #region Properties
         public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Category Name is required")]
@@ -12,6 +13,7 @@ namespace UI.Areas.Admin.Models
 
         public string CategoryName { get; set; }
 
-        public string Description { get; set; }
+        public string Description { get; set; } 
+        #endregion
     }
 }
