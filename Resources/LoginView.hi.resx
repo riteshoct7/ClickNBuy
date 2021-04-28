@@ -118,36 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClickHere" xml:space="preserve">
-    <value>Cliquez ici</value>
+    <value>यहाँ क्लिक करें</value>
   </data>
   <data name="ClickNBuy" xml:space="preserve">
-    <value>Cliquez surNAcheter</value>
+    <value>क्लिक करें पर खरीदें</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
-    <value>Mot de passe oublié</value>
+    <value>पासवर्ड भूल गए?</value>
   </data>
   <data name="GetStarted" xml:space="preserve">
-    <value>pour commencer.</value>
+    <value>आरंभ करना।</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Connexion</value>
+    <value>लॉग इन करें</value>
   </data>
   <data name="LoginToAccount" xml:space="preserve">
-    <value>Connectez-vous à votre compte</value>
+    <value>अपने अकाउंट में लॉग इन करें</value>
   </data>
   <data name="NoAccountText" xml:space="preserve">
-    <value>Vous n'avez pas de compte Cliquez surNAcheter ?</value>
+    <value>क्लिक करें पर खरीदें  खाता नहीं है?</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Mot de passe</value>
+    <value>कुंजिका</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>रजिस्टर करें</value>
   </data>
   <data name="SignUp" xml:space="preserve">
-    <value>S'inscrire</value>
+    <value>साइन अप करें</value>
   </data>
   <data name="SocialConnect" xml:space="preserve">
-    <value>Connexion sociale</value>
+    <value>सामाजिक लॉगिन</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>Nom d'utilisateur</value>
+    <value>उपयोगकर्ता नाम</value>
   </data>
 </root>

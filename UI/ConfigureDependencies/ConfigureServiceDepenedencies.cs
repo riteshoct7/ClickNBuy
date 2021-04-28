@@ -2,6 +2,8 @@
 using Services.Implementations;
 using Services.Interfaces;
 
+using Resources;
+
 namespace UI.ConfigureDependencies
 {
     public class ConfigureServiceDepenedencies
@@ -12,6 +14,7 @@ namespace UI.ConfigureDependencies
         {
             services.AddScoped<IAuthenticateService, AuthenticateService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddSingleton<IAppResource, SharedResources>();
         } 
 
         #endregion

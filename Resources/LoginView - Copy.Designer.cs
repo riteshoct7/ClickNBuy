@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click N Buy.
+        /// </summary>
+        public static string ClickNBuy {
+            get {
+                return ResourceManager.GetString("ClickNBuy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot Password?.
         /// </summary>
         public static string ForgotPassword {

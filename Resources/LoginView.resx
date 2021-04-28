@@ -120,6 +120,9 @@
   <data name="ClickHere" xml:space="preserve">
     <value>Click Here</value>
   </data>
+  <data name="ClickNBuy" xml:space="preserve">
+    <value>Click N Buy</value>
+  </data>
   <data name="ForgotPassword" xml:space="preserve">
     <value>Forgot Password?</value>
   </data>

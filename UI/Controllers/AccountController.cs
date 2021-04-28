@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +10,23 @@ namespace UI.Controllers
 {
     public class AccountController : Controller
     {
-        public AccountController()
-        {
 
+        private readonly IAppResource _sharedLocalizer;
+        public AccountController(IAppResource sharedLocalizer)
+        {
+            _sharedLocalizer = sharedLocalizer;
         }
 
         public IActionResult Index()
         {
+    
             return View();
         }
 
         public IActionResult Login()
         {
+            string result = _sharedLocalizer.GetResource("Water");
+            ViewBag.Water = result;
             return View();
         }
 

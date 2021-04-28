@@ -1,13 +1,19 @@
 ﻿@model UI.Models.LoginModel
 @using Resources
+@using System.Globalization;
 
 @{
     ViewData["Title"] = "Login";
 }
 
 <div class="row">
-    <div class="col-md-6">        
+    <div class="col-md-6">
         <h1 class="auth-title">@LoginView.SocialConnect</h1>
+        @*@ViewBag.Water <br />
+
+        @CultureInfo.CurrentUICulture.Name <br />
+        @CultureInfo.CurrentCulture.Name*@
+
     </div>
     <div class="col-md-6">
         <form asp-action="Login">
@@ -23,14 +29,14 @@
             </div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label">
-                    @(LoginView.UserName)
+                    @LoginView.UserName
                 </label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label">
-                    @(LoginView.Password)
+                    @LoginView.Password
                 </label>
                 <input type="password" asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
